@@ -100,6 +100,7 @@ SOAP_FMAC5 int SOAP_FMAC6 __tev__DestroyPullPoint(struct soap *ctx, struct _wsnt
 /** Web service one-way operation '__tev__Notify_' implementation, should return value of soap_send_empty_response() to send HTTP Accept acknowledgment, or return an error code, or return SOAP_OK to immediately return without sending an HTTP response message */
 SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify_(struct soap *ctx, struct _wsnt__Notify *wsnt__Notify)
 {
+  soap_send_empty_response(ctx, 200);
   return SOAP_OK;
 };
 /** Web service operation '__tev__CreatePullPoint' implementation, should return SOAP_OK or error code */
