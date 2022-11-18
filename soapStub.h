@@ -4881,6 +4881,172 @@ typedef _QName wstop__SimpleTopicExpression;
 
 /******************************************************************************\
  *                                                                            *
+ * Client-Side Call Stub Functions                                            *
+ *                                                                            *
+\******************************************************************************/
+
+    /** Web service one-way asynchronous operation 'soap_send_SOAP_ENV__Fault' */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send_SOAP_ENV__Fault(struct soap *soap, const char *soap_endpoint, const char *soap_action, char *faultcode, char *faultstring, char *faultactor, struct SOAP_ENV__Detail *detail, struct SOAP_ENV__Code *SOAP_ENV__Code, struct SOAP_ENV__Reason *SOAP_ENV__Reason, char *SOAP_ENV__Node, char *SOAP_ENV__Role, struct SOAP_ENV__Detail *SOAP_ENV__Detail);
+    /** Web service one-way asynchronous operation 'soap_recv_SOAP_ENV__Fault' */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv_SOAP_ENV__Fault(struct soap *soap, struct SOAP_ENV__Fault *_param_1);
+    
+    /** Web service synchronous operation 'soap_call___tev__PullMessages' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__PullMessages(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__PullMessages *tev__PullMessages, struct _tev__PullMessagesResponse *tev__PullMessagesResponse);
+    /** Web service asynchronous operation 'soap_send___tev__PullMessages' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__PullMessages(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__PullMessages *tev__PullMessages);
+    /** Web service asynchronous operation 'soap_recv___tev__PullMessages' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__PullMessages(struct soap *soap, struct _tev__PullMessagesResponse *tev__PullMessagesResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__Seek' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__Seek(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__Seek *tev__Seek, struct _tev__SeekResponse *tev__SeekResponse);
+    /** Web service asynchronous operation 'soap_send___tev__Seek' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Seek(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__Seek *tev__Seek);
+    /** Web service asynchronous operation 'soap_recv___tev__Seek' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Seek(struct soap *soap, struct _tev__SeekResponse *tev__SeekResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__SetSynchronizationPoint' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__SetSynchronizationPoint(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__SetSynchronizationPoint *tev__SetSynchronizationPoint, struct _tev__SetSynchronizationPointResponse *tev__SetSynchronizationPointResponse);
+    /** Web service asynchronous operation 'soap_send___tev__SetSynchronizationPoint' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__SetSynchronizationPoint(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__SetSynchronizationPoint *tev__SetSynchronizationPoint);
+    /** Web service asynchronous operation 'soap_recv___tev__SetSynchronizationPoint' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__SetSynchronizationPoint(struct soap *soap, struct _tev__SetSynchronizationPointResponse *tev__SetSynchronizationPointResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__Unsubscribe' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__Unsubscribe(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    /** Web service asynchronous operation 'soap_send___tev__Unsubscribe' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Unsubscribe(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Unsubscribe *wsnt__Unsubscribe);
+    /** Web service asynchronous operation 'soap_recv___tev__Unsubscribe' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Unsubscribe(struct soap *soap, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__GetServiceCapabilities' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__GetServiceCapabilities(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__GetServiceCapabilities *tev__GetServiceCapabilities, struct _tev__GetServiceCapabilitiesResponse *tev__GetServiceCapabilitiesResponse);
+    /** Web service asynchronous operation 'soap_send___tev__GetServiceCapabilities' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__GetServiceCapabilities(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__GetServiceCapabilities *tev__GetServiceCapabilities);
+    /** Web service asynchronous operation 'soap_recv___tev__GetServiceCapabilities' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__GetServiceCapabilities(struct soap *soap, struct _tev__GetServiceCapabilitiesResponse *tev__GetServiceCapabilitiesResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__CreatePullPointSubscription' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__CreatePullPointSubscription(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__CreatePullPointSubscription *tev__CreatePullPointSubscription, struct _tev__CreatePullPointSubscriptionResponse *tev__CreatePullPointSubscriptionResponse);
+    /** Web service asynchronous operation 'soap_send___tev__CreatePullPointSubscription' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__CreatePullPointSubscription(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__CreatePullPointSubscription *tev__CreatePullPointSubscription);
+    /** Web service asynchronous operation 'soap_recv___tev__CreatePullPointSubscription' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__CreatePullPointSubscription(struct soap *soap, struct _tev__CreatePullPointSubscriptionResponse *tev__CreatePullPointSubscriptionResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__GetEventProperties' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__GetEventProperties(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__GetEventProperties *tev__GetEventProperties, struct _tev__GetEventPropertiesResponse *tev__GetEventPropertiesResponse);
+    /** Web service asynchronous operation 'soap_send___tev__GetEventProperties' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__GetEventProperties(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__GetEventProperties *tev__GetEventProperties);
+    /** Web service asynchronous operation 'soap_recv___tev__GetEventProperties' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__GetEventProperties(struct soap *soap, struct _tev__GetEventPropertiesResponse *tev__GetEventPropertiesResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__AddEventBroker' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__AddEventBroker(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__AddEventBroker *tev__AddEventBroker, struct _tev__AddEventBrokerResponse *tev__AddEventBrokerResponse);
+    /** Web service asynchronous operation 'soap_send___tev__AddEventBroker' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__AddEventBroker(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__AddEventBroker *tev__AddEventBroker);
+    /** Web service asynchronous operation 'soap_recv___tev__AddEventBroker' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__AddEventBroker(struct soap *soap, struct _tev__AddEventBrokerResponse *tev__AddEventBrokerResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__DeleteEventBroker' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__DeleteEventBroker(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__DeleteEventBroker *tev__DeleteEventBroker, struct _tev__DeleteEventBrokerResponse *tev__DeleteEventBrokerResponse);
+    /** Web service asynchronous operation 'soap_send___tev__DeleteEventBroker' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__DeleteEventBroker(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__DeleteEventBroker *tev__DeleteEventBroker);
+    /** Web service asynchronous operation 'soap_recv___tev__DeleteEventBroker' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__DeleteEventBroker(struct soap *soap, struct _tev__DeleteEventBrokerResponse *tev__DeleteEventBrokerResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__GetEventBrokers' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__GetEventBrokers(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__GetEventBrokers *tev__GetEventBrokers, struct _tev__GetEventBrokersResponse *tev__GetEventBrokersResponse);
+    /** Web service asynchronous operation 'soap_send___tev__GetEventBrokers' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__GetEventBrokers(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _tev__GetEventBrokers *tev__GetEventBrokers);
+    /** Web service asynchronous operation 'soap_recv___tev__GetEventBrokers' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__GetEventBrokers(struct soap *soap, struct _tev__GetEventBrokersResponse *tev__GetEventBrokersResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__Renew' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__Renew(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Renew *wsnt__Renew, struct _wsnt__RenewResponse *wsnt__RenewResponse);
+    /** Web service asynchronous operation 'soap_send___tev__Renew' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Renew(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Renew *wsnt__Renew);
+    /** Web service asynchronous operation 'soap_recv___tev__Renew' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Renew(struct soap *soap, struct _wsnt__RenewResponse *wsnt__RenewResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__Unsubscribe_' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__Unsubscribe_(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    /** Web service asynchronous operation 'soap_send___tev__Unsubscribe_' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Unsubscribe_(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Unsubscribe *wsnt__Unsubscribe);
+    /** Web service asynchronous operation 'soap_recv___tev__Unsubscribe_' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Unsubscribe_(struct soap *soap, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__Subscribe' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__Subscribe(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Subscribe *wsnt__Subscribe, struct _wsnt__SubscribeResponse *wsnt__SubscribeResponse);
+    /** Web service asynchronous operation 'soap_send___tev__Subscribe' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Subscribe(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Subscribe *wsnt__Subscribe);
+    /** Web service asynchronous operation 'soap_recv___tev__Subscribe' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Subscribe(struct soap *soap, struct _wsnt__SubscribeResponse *wsnt__SubscribeResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__GetCurrentMessage' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__GetCurrentMessage(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__GetCurrentMessage *wsnt__GetCurrentMessage, struct _wsnt__GetCurrentMessageResponse *wsnt__GetCurrentMessageResponse);
+    /** Web service asynchronous operation 'soap_send___tev__GetCurrentMessage' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__GetCurrentMessage(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__GetCurrentMessage *wsnt__GetCurrentMessage);
+    /** Web service asynchronous operation 'soap_recv___tev__GetCurrentMessage' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__GetCurrentMessage(struct soap *soap, struct _wsnt__GetCurrentMessageResponse *wsnt__GetCurrentMessageResponse);
+    /** Web service one-way asynchronous operation 'soap_send___tev__Notify' */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Notify(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Notify *wsnt__Notify);
+    /** Web service one-way asynchronous operation 'soap_recv___tev__Notify' */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Notify(struct soap *soap, struct __tev__Notify *_param_1);
+    
+    /** Web service synchronous operation 'soap_call___tev__GetMessages' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__GetMessages(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__GetMessages *wsnt__GetMessages, struct _wsnt__GetMessagesResponse *wsnt__GetMessagesResponse);
+    /** Web service asynchronous operation 'soap_send___tev__GetMessages' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__GetMessages(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__GetMessages *wsnt__GetMessages);
+    /** Web service asynchronous operation 'soap_recv___tev__GetMessages' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__GetMessages(struct soap *soap, struct _wsnt__GetMessagesResponse *wsnt__GetMessagesResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__DestroyPullPoint' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__DestroyPullPoint(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__DestroyPullPoint *wsnt__DestroyPullPoint, struct _wsnt__DestroyPullPointResponse *wsnt__DestroyPullPointResponse);
+    /** Web service asynchronous operation 'soap_send___tev__DestroyPullPoint' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__DestroyPullPoint(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__DestroyPullPoint *wsnt__DestroyPullPoint);
+    /** Web service asynchronous operation 'soap_recv___tev__DestroyPullPoint' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__DestroyPullPoint(struct soap *soap, struct _wsnt__DestroyPullPointResponse *wsnt__DestroyPullPointResponse);
+    /** Web service one-way asynchronous operation 'soap_send___tev__Notify_' */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Notify_(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Notify *wsnt__Notify);
+    /** Web service one-way asynchronous operation 'soap_recv___tev__Notify_' */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Notify_(struct soap *soap, struct __tev__Notify_ *_param_1);
+    
+    /** Web service synchronous operation 'soap_call___tev__CreatePullPoint' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__CreatePullPoint(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__CreatePullPoint *wsnt__CreatePullPoint, struct _wsnt__CreatePullPointResponse *wsnt__CreatePullPointResponse);
+    /** Web service asynchronous operation 'soap_send___tev__CreatePullPoint' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__CreatePullPoint(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__CreatePullPoint *wsnt__CreatePullPoint);
+    /** Web service asynchronous operation 'soap_recv___tev__CreatePullPoint' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__CreatePullPoint(struct soap *soap, struct _wsnt__CreatePullPointResponse *wsnt__CreatePullPointResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__Renew_' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__Renew_(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Renew *wsnt__Renew, struct _wsnt__RenewResponse *wsnt__RenewResponse);
+    /** Web service asynchronous operation 'soap_send___tev__Renew_' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Renew_(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Renew *wsnt__Renew);
+    /** Web service asynchronous operation 'soap_recv___tev__Renew_' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Renew_(struct soap *soap, struct _wsnt__RenewResponse *wsnt__RenewResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__Unsubscribe__' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__Unsubscribe__(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    /** Web service asynchronous operation 'soap_send___tev__Unsubscribe__' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__Unsubscribe__(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__Unsubscribe *wsnt__Unsubscribe);
+    /** Web service asynchronous operation 'soap_recv___tev__Unsubscribe__' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__Unsubscribe__(struct soap *soap, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__PauseSubscription' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__PauseSubscription(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__PauseSubscription *wsnt__PauseSubscription, struct _wsnt__PauseSubscriptionResponse *wsnt__PauseSubscriptionResponse);
+    /** Web service asynchronous operation 'soap_send___tev__PauseSubscription' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__PauseSubscription(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__PauseSubscription *wsnt__PauseSubscription);
+    /** Web service asynchronous operation 'soap_recv___tev__PauseSubscription' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__PauseSubscription(struct soap *soap, struct _wsnt__PauseSubscriptionResponse *wsnt__PauseSubscriptionResponse);
+    
+    /** Web service synchronous operation 'soap_call___tev__ResumeSubscription' to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_call___tev__ResumeSubscription(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__ResumeSubscription *wsnt__ResumeSubscription, struct _wsnt__ResumeSubscriptionResponse *wsnt__ResumeSubscriptionResponse);
+    /** Web service asynchronous operation 'soap_send___tev__ResumeSubscription' to send a request message to the specified endpoint and SOAP Action header, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_send___tev__ResumeSubscription(struct soap *soap, const char *soap_endpoint, const char *soap_action, struct _wsnt__ResumeSubscription *wsnt__ResumeSubscription);
+    /** Web service asynchronous operation 'soap_recv___tev__ResumeSubscription' to receive a response message from the connected endpoint, returns SOAP_OK or error code */
+    SOAP_FMAC5 int SOAP_FMAC6 soap_recv___tev__ResumeSubscription(struct soap *soap, struct _wsnt__ResumeSubscriptionResponse *wsnt__ResumeSubscriptionResponse);
+
+/******************************************************************************\
+ *                                                                            *
  * Server-Side Operations                                                     *
  *                                                                            *
 \******************************************************************************/
