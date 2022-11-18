@@ -85,6 +85,9 @@ SOAP_FMAC5 int SOAP_FMAC6 __tev__GetCurrentMessage(struct soap *ctx, struct _wsn
 /** Web service one-way operation '__tev__Notify' implementation, should return value of soap_send_empty_response() to send HTTP Accept acknowledgment, or return an error code, or return SOAP_OK to immediately return without sending an HTTP response message */
 SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify(struct soap *ctx, struct _wsnt__Notify *wsnt__Notify)
 {
+  // TODO - Implement this one to receive Notify messages
+  fprintf(stdout, "__tev__Notify\n");
+  soap_send_empty_response(ctx, 200);
   return SOAP_OK;
 };
 /** Web service operation '__tev__GetMessages' implementation, should return SOAP_OK or error code */
@@ -100,6 +103,7 @@ SOAP_FMAC5 int SOAP_FMAC6 __tev__DestroyPullPoint(struct soap *ctx, struct _wsnt
 /** Web service one-way operation '__tev__Notify_' implementation, should return value of soap_send_empty_response() to send HTTP Accept acknowledgment, or return an error code, or return SOAP_OK to immediately return without sending an HTTP response message */
 SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify_(struct soap *ctx, struct _wsnt__Notify *wsnt__Notify)
 {
+  fprintf(stdout, "__tev__Notify_\n");
   soap_send_empty_response(ctx, 200);
   return SOAP_OK;
 };
@@ -131,6 +135,7 @@ SOAP_FMAC5 int SOAP_FMAC6 __tev__ResumeSubscription(struct soap *ctx, struct _ws
 
 int main()
 {
+  fprintf(stdout,"Starting...\n");
   struct soap *soap = soap_new1(SOAP_XML_INDENT);
   if (!soap_valid_socket(soap_bind(soap, NULL, 8080, 10))) // port 8080 and small BACKLOG queue for iterative servers
     exit(EXIT_FAILURE);
