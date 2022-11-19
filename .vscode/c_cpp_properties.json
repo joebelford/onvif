@@ -4,8 +4,10 @@
             "name": "Linux",
             "defines": [
                 "WITH_OPENSSL",
-                "WITH_DOM"
+                "WITH_DOM",
+                "HAVE_CONFIG_H"
             ],
+            "includePath": ["/opt/gsoap-2.8/**"],
             "intelliSenseMode": "linux-clang-x64",
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
