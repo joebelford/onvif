@@ -5,6 +5,7 @@
             "defines": [
                 "WITH_OPENSSL",
                 "WITH_DOM",
+                "WITH_GZIP",
                 "HAVE_CONFIG_H"
             ],
             "includePath": ["/opt/gsoap-2.8/**"],
