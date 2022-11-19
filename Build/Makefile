@@ -1,2 +1,11 @@
+CC := clang
+OUTPUT_DIR := bin
+SRC := Main.c soapC.c soapServer.c soapStub.c
+APP := notify
+LDFLAGS_Linux := -lgsoapssl -lssl -lz -lcrypto
+info:
+	@echo "Run make notify"
+clean:
+	rm -rf $(OUTPUT_DIR)/*
 notify:
-	$(CC) -o bin/notify Main.c soapC.c soapServer.c soapStub.c stdsoap2_ssl.c
+	$(CC) -o $(OUTPUT_DIR)/$(APP) $(SRC) $(LDFLAGS_Linux)
