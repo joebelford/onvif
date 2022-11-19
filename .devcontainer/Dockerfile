@@ -22,9 +22,9 @@ RUN echo ========== Install dependencies ========== \
     flex \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
-WORKDIR /build
+WORKDIR /opt
 RUN wget -q https://sourceforge.net/projects/gsoap2/files/latest/download && unzip -q download
 WORKDIR gsoap-2.8
-RUN ./configure && make && make install
-WORKDIR /build
-RUN rm -rf ./*
+RUN ./configure
+WORKDIR /opt
+RUN rm -rf download
