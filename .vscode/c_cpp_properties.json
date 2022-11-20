@@ -3,10 +3,9 @@
         {
             "name": "Linux",
             "defines": [
-                "WITH_OPENSSL",
-                "WITH_DOM",
-                "WITH_GZIP",
-                "HAVE_CONFIG_H"
+                "HAVE_CONFIG_H",
+                "WITH_NOHTTP",
+                "WITH_NOIO"
             ],
             "includePath": ["/opt/gsoap-2.8/**"],
             "intelliSenseMode": "linux-clang-x64",
