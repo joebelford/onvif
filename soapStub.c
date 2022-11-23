@@ -461,9 +461,10 @@
     /** Web service one-way operation '__tev__Notify' implementation, should return value of soap_send_empty_response() to send HTTP Accept acknowledgment, or return an error code, or return SOAP_OK to immediately return without sending an HTTP response message */
     SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify(struct soap* soap, struct _wsnt__Notify *wsnt__Notify){
         // TODO - Implement this one to receive Notify messages
-  fprintf(stdout, wsnt__Notify->NotificationMessage_->Message.__any);
-  fprintf(stdout, wsnt__Notify->NotificationMessage_->Topic->__any);
-  soap_send_empty_response(soap, 200);
+        // struct _tt__Message;
+      fprintf(stdout, wsnt__Notify->NotificationMessage_->Message.__any);
+      fprintf(stdout, wsnt__Notify->NotificationMessage_->Topic->__any);
+      soap_send_empty_response(soap, 200);
 
       return SOAP_OK;
     }
