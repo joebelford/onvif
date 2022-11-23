@@ -1,8 +1,8 @@
 CC := clang
 OUTPUT_DIR := bin
 GSOAP_DIR := /opt/gsoap-2.8
-SRC := Main.c soapC.c soapServer.c soapClient.c soapStub.c \
-$(GSOAP_DIR)/gsoap/stdsoap2.c $(GSOAP_DIR)/gsoap/plugin/threads.c
+SRC := Main.c soapC.c soapServer.c soapClient.c soapStub.c soapEventStub.c \
+soapDeviceStub.c $(GSOAP_DIR)/gsoap/stdsoap2.c $(GSOAP_DIR)/gsoap/plugin/threads.c
 APP := notify
 LDFLAGS_Linux := -lssl -lz -lcrypto -lpthread
 CFLAGS_GSOAP := -I$(GSOAP_DIR)
