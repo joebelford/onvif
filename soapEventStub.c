@@ -81,19 +81,74 @@ SOAP_FMAC5 int SOAP_FMAC6 __tev__GetCurrentMessage(struct soap *soap, struct _ws
 SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify(struct soap *soap, struct _wsnt__Notify *wsnt__Notify)
 {
   // TODO - Implement this one to receive Notify messages
-  struct soap ttSoap;
-  soap_init(&ttSoap);
-  struct _tt__Message message;
-  ttSoap.is = wsnt__Notify->NotificationMessage_->Message.__any;
-  if (soap_read__tt__Message(&ttSoap, &message))
+  if (!strncmp(wsnt__Notify->NotificationMessage_->Topic->__any, "tns1:VideoSource/MotionAlarm", 29))
   {
-    fprintf(stderr, "Not a tt message\n");
+    fprintf(stderr, "Topic: %s\n", wsnt__Notify->NotificationMessage_->Topic->__any);
+  }
+  else if (!strncmp(wsnt__Notify->NotificationMessage_->Topic->__any, "tns1:RuleEngine/CellMotionDetector/Motion", 42))
+  {
+    // TODO - Implement this after MotionAlarm and see if they're different.
+    fprintf(stdout, "Topic not yet implemented: %s\n", wsnt__Notify->NotificationMessage_->Topic->__any);
+    soap_send_empty_response(soap, 200);
+    return SOAP_OK;
+  }
+  else
+  {
+    fprintf(stderr, "Notification not supported.\n");
     soap_send_empty_response(soap, 200);
     return SOAP_OK;
   }
 
-  // fprintf(stderr, wsnt__Notify->NotificationMessage_->Message.__any);
-  fprintf(stderr, message.Source->SimpleItem->Name);
+  struct soap ttSoap;
+  soap_init1(&ttSoap, SOAP_XML_IGNORENS);
+  struct _tt__Message *message = soap_new__tt__Message(&ttSoap,1);
+  ttSoap.is = wsnt__Notify->NotificationMessage_->Message.__any;
+  if (soap_read__tt__Message(&ttSoap, message))
+  {
+    soap_print_fault(&ttSoap, stderr);
+    soap_send_empty_response(soap, 200);
+    soap_destroy(&ttSoap);
+    soap_end(&ttSoap);
+    return SOAP_OK;
+  }
+
+  switch (*(message)->PropertyOperation)
+  {
+  case tt__PropertyOperation__Initialized:
+    fprintf(stderr, "Initialized\n");
+    break;
+  case tt__PropertyOperation__Changed:
+    // TODO - Need a for loop in case of multiple SimpleItems
+    for (size_t i = 0; i < message->Data->__sizeSimpleItem; i++)
+    {
+      if (!strncmp(message->Data->SimpleItem[i].Name, "State", 6))
+      {
+        if (!strncmp(message->Data->SimpleItem[i].Value, "true", 5))
+        {
+          fprintf(stdout, "Motion is active.\n");
+        }
+        else if (!strncmp(message->Data->SimpleItem[i].Value, "false", 6))
+        {
+          fprintf(stdout, "Motion is not active.\n");
+        }
+        else
+        {
+          fprintf(stderr, "Unsupported Value: %s\n", message->Data->SimpleItem[i].Value);
+        }
+      }
+      else
+      {
+        fprintf(stderr, "Unsupported Element: %s\n", message->Data->SimpleItem[i].Name);
+      }
+    }
+    break;
+  case tt__PropertyOperation__Deleted:
+    fprintf(stderr, "Deleted\n");
+    break;
+  default:
+    fprintf(stderr, "Default\n");
+    break;
+  }
   // soap_done(&ttSoap);
   soap_destroy(&ttSoap);
   soap_end(&ttSoap);
